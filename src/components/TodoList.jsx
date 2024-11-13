@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
 const TodoList = ({ todos, handleComplete }) => {
   return (
-    <div>
-      <h3>Child Component</h3>
+    <div style={{ marginLeft: '20px' }}>
+      <h2>Child Component</h2>
       <ul>
         {todos?.map((todo) => (
           <li key={todo.id}>
-            {todo.text}
-            {!todo.completed && (
-              <button onClick={() => handleComplete(todo.id)}>Complete</button>
+            {todo?.text}
+            {!todo?.completed && (
+              <button onClick={() => handleComplete(todo?.id)}>Complete</button>
             )}
           </li>
         ))}
